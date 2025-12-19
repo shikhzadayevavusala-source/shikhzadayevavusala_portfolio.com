@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        :root {
+            --base-color: #e6ebf1;
+            --text-color: #000000;
+            --primary-color: #c69074;
+            --secondary-color: #386378;
+            --color-1: #ffffff;
+        }
+        
+        body {
+            background-color: var(--base-color);
+            background-position: center;
+            font-family: Serif;
+            margin: 0;
+            padding: 20px;
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: clamp(1.5rem, 5vw, 3rem);
+            margin: 2em 0;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .project {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(198, 144, 116, 0.2);
+        }
+        
+        .project h3 {
+            color: var(--secondary-color);
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            margin: 0;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.1s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f0eb 100%);
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            color: var(--secondary-color);
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+        }
+        
+        .close-btn {
+            font-size: 30px;
+            font-weight: bold;
+            color: var(--primary-color);
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: transform 0.2s ease;
+        }
+        
+        .close-btn:hover {
+            transform: scale(1.3);
+            color: #8f6550;
+        }
+        
+        .modal-body {
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+        }
+        
+        .modal-body p {
+            margin: 10px 0;
+        }
+        
+        .modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .videos-projects {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <h1>My projects</h1>
+    
+    <div class="container">
+        <div class="project" onclick="openModal('project1')">
+            <h3>Project 1</h3>
+        </div>
+        <div class="project" onclick="openModal('project2')">
+            <h3>Project 2</h3>
+        </div>
+        <div class="project" onclick="openModal('project3')">
+            <h3>Project 3</h3>
+        </div>
+    </div>
+    
+    <!-- Modal for Project 1 -->
+    <div id="project1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Project 1</h2>
+                <button class="close-btn" onclick="closeModal('project1')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><big><strong>Title:</strong> How does hardware work?</big></p>
+                <p><strong>Description:</strong> This is my first project where as a team 55 we collabrated with the other teams to construct basic logic gates using transistors and other electronic componenets.</p>
+                <p><strong>Technologies:</strong>
+                    <ol>
+                    <li>Solderless breadboard</li>
+                    <li>Power supply module </li>
+                    <li>Resistor (330 Ohm)</li>
+                    <li>Small pushbutton</li>
+                    <li>Resistor (2,000 Ohm)</li>
+                    <li>NPN transistor (PN2222)</li>
+                    <li>Light-emitting diode (LED)</li>
+                    <li>Jumper wires</li>
+                </ol></p>
+                <p><strong>Collaboration:</strong>Team</p>
+                <p><strong>Some Memories:</strong></p>
+                <p><img src="images/WhatsApp Image 2025-11-26 at 21.29.36_63f42eb6.jpg" style="height: 250px; border-radius: 50%"></p>
+                <p><strong>Status:</strong> Completed</p>
+                <p id="test1"><strong>Grade:</strong> <button onclick="showthegrade1()" style="background-color: rgb(215, 166, 116); height: auto; width: auto; "> Click to see the grade</button></p>
+                <script>
+                    function showthegrade1() {
+                        document.getElementById("test1").innerHTML = "<strong>Grade:</strong> Not graded";
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Project 2 -->
+    <div id="project2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Project 2</h2>
+                <button class="close-btn" onclick="closeModal('project2')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><big><strong>Title:</strong> Hour of Code</big></p>
+                <p><strong>Description:</strong> Developing the understanding of algorithms and share the knowladge with your community.</p>
+                <p><strong>Collaboration:</strong> Team</p>
+                <p><strong>Community: </strong>Zakalar High school</p>
+                <p><strong>Number of pupils: </strong>19</p>
+                <p><strong>Status:</strong> Incompleted</p>
+                <p><strong>Some Memories: </strong></p>
+                <p><img src="images/Project 2.jpg" alt="Pupils and team 55" style="height: 250px; border-radius: 50%"></p>
+
+
+                <p id="test2"><strong>Grade:</strong> <button onclick="showthegrade2()" style="background-color: rgb(215, 166, 116); height: auto; width: auto; ">Click to see the grade</button></p>
+                <script>
+                    function showthegrade2() {
+                        document.getElementById("test2").innerHTML = "<strong>Grade:</strong> Not graded";
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Project 3 -->
+    <div id="project3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Project 3</h2>
+                <button class="close-btn" onclick="closeModal('project3')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><big><strong>Title:</strong> Personal Website</big></p>
+                <p><strong>Description:</strong> Developing my understanding of programming by developing a <b style="color: #c69074;">personal portfolio website.</b></p>
+                <p><strong>Collaboration:</strong> Individual</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p id="test3"><strong>Grade:</strong> <button onclick="showthegrade3()" style="background-color: rgb(215, 166, 116); height: auto; width: auto; ">Click to see the grade</button></p>
+                <script>
+                    function showthegrade3() {
+                        document.getElementById("test3").innerHTML = "<strong>Grade:</strong> Not graded";
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="videos-projects">
+            <br><br><br><p style="font-size: 20px;">Meet project videos for comprehensive view</p><br>
+            <p><strong style="font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Our group Project I (Team 55)</strong></p>
+            <p style="display: flex; justify-content: center; align-items: center;"><video src="images/WhatsApp Video 2025-10-18 at 12.08.49_6f11999e.mp4" style="height: 200px; margin: 20px;" controls></video></p>
+            <p><strong style="font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Our group project II (Team 55)</strong></p>
+            <p></p>
+            <p><strong style="font-size: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">My individual project III</strong> </p>
+            <p>I collected all my adventures through this period and created a video. Hope you won't get bored</p>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+<script>
+    function openModal(projectId) {
+        const modal = document.getElementById(projectId);
+        modal.classList.add('active');
+    }
+    
+    function closeModal(projectId) {
+        const modal = document.getElementById(projectId);
+        modal.classList.remove('active');
+    }
+    
+    // Close modal when clicking outside the modal content
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.classList.remove('active');
+        }
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            const modals = document.querySelectorAll('.modal.active');
+            modals.forEach(modal => {
+                modal.classList.remove('active');
+            });
+        }
+    });
+</script>
