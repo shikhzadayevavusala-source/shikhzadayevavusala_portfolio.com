@@ -63,8 +63,8 @@
       <h3 id="code-academy" class="section-title">Code Academy</h3>
       <p><img src="images/Codeacademy profile.png" alt="Code Academy Profile"style="width:300px; border-radius: 10px; margin-top: 10px;">
       </p>
-      <p><img src="images/screenshot code1.png" alt="Code Academy Screenshot" style="width:300px; border-radius: 10px; margin-top: 10px;"></p>
-      <p><img src="images/screenshot code2.png" alt="Code Academy Screenshot" style="width:300px; border-radius: 10px; margin-top: 10px;"></p>
+      <p><img src="screenshot code1.png" alt="Code Academy Screenshot" style="width:300px; border-radius: 10px; margin-top: 10px;"></p>
+      <p><img src="screenshot code2.png" alt="Code Academy Screenshot" style="width:300px; border-radius: 10px; margin-top: 10px;"></p>
       <p>I have completed some courses on Code Academy, Python and C++.</p>
       <a href="https://www.codecademy.com/profiles/tag2611946158" target ="_blank" class="btn btn-secondary">Code Academy Profile</a>
     </div>
@@ -78,5 +78,6 @@
   </div>
 </footer>
 </html>
+
 
 
