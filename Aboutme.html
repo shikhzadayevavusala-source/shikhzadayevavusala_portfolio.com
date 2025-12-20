@@ -71,6 +71,27 @@
         object-fit: cover;
         pbject-position: center;
     }
+
+    /* 1. Mobile Styles (Default) */
+.container {
+  width: 100%;
+  padding: 10px;
+}
+
+/* 2. Tablet Styles (Screens wider than 768px) */
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+    display: flex; /* Switch from a vertical stack to side-by-side */
+  }
+}
+
+/* 3. Desktop Styles (Screens wider than 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px; /* Stop the site from getting too wide on monitors */
+  }
+}
         
 </style>
 <nav>
@@ -94,21 +115,18 @@
     <section>
         <h2 id="education" style="color: var(--primary-color);">Education</h2>
         <p>I am currently a first-year student at ADA University, majoring in Mathematics. During my school years, I participated in various competitions and received diplomas, medals, and gifts for my achievements. Now I am mainly focused on passing the University courses. Though it is very hard and challanging, after every failure I am trying to get up and check other new methods of studying. I enjoy organizing things — my notes, study plans, and even my daily schedule. I like watching educational videos, learning new strategies for studying, and finding ways to understand difficult subjects more easily. I also enjoy reading short articles, exploring interesting topics online, and sometimes practicing English through videos or exercises.</p>
-        <p>Unfinished competitions</p>
-        <ol>
-            <li>RFO</li>
+        <p>Unfinished competitions from RFO</p>
             <ul>
                 <li>Physics - Couldn't take place at second round</li>
                 <li>Mathematics - Couldn't take place in final</li>
             </ul>
-            <li></li>
-        </ol>
         <p>Here are my diplomas that I got</p>
         <ol>
-            <li>BIO</li>
-            <li>Essay writing "Karabakh War"</li>
-            <li>Kiçik Akademiya</li>
-            <li>Neyron Sınaq imtahanı</li>
+            <li><strong>BIO</strong> Our school got 1st place - gold medal.</li>
+            <li><strong>Essay writing "Karabakh War"</strong> I got second place when I was 12.</li>
+            <li><strong>Kiçik Akademiya</strong>I presented my math view to the guests of our shool.</li>
+            <li><strong>Neyron Sınaq imtahanı</strong> I got the highest score in the course.</li>
+            <li>and others</li>
             
         </ol>
     </section>
